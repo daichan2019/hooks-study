@@ -3,8 +3,8 @@ import React, { useReducer, useState } from "react";
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_TASK":
-      const todos = { title: action.title, isComplete: false };
-      return [...state, todos];
+      const task = { title: action.title, isComplete: false };
+      return [...state, task];
     case "DELETE_TASK":
       return state.filter((x) => x !== action.todo);
     default:
