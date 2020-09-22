@@ -12,10 +12,15 @@ const App = () => {
 
   const [hobby, setHobby] = useState("キャンプ");
 
+  const userInfo = {
+    user,
+    hobby,
+  };
+
   return (
     <div>
       <h1>useContext</h1>
-      <UserContext.Provider value={user}>
+      <UserContext.Provider value={userInfo}>
         <HobbyContext.Provider value={hobby}>
           <ContextA />
         </HobbyContext.Provider>
